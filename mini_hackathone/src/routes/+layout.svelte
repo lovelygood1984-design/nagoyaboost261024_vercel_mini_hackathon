@@ -8,6 +8,9 @@
 		{ href: '/', label: 'おみくじ' },
 		{ href: '/history', label: 'おみくじ記録' }
 	];
+
+	const centerImage =
+		'https://xvmtct0eugcs16fs.public.blob.vercel-storage.com/omikuji_image/Hockey_Goal_Celebration.gif';
 </script>
 
 <div class="shell">
@@ -23,6 +26,10 @@
 	</header>
 
 	<main>
+		<div class="center-image">
+			<img src={centerImage} alt="Hockey Goal Celebration" />
+		</div>
+
 		{@render children()}
 	</main>
 
@@ -77,6 +84,21 @@
 	main {
 		flex: 1;
 		padding-top: 1.5rem;
+	}
+
+	.center-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1.5rem 0 2rem;
+	}
+
+	.center-image img {
+		max-width: 100%;
+		width: 320px;
+		height: auto;
+		border-radius: 12px;
+		display: block;
 	}
 
 	footer {
